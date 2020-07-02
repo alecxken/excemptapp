@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-static-top">
+  <nav class="navbar navbar-static-top" style=" background-image: linear-gradient(to right,#FFF,#FBB3CF,#900C3F);">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
@@ -55,13 +55,13 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-              <img src="{{asset('/images/'.Auth::user()->image)}}" onerror="this.src='../../dist/img/user4-128x128.jpg'" class="user-image" alt="User Image">
+              <img src="{{asset('/images/logo.png')}}"  onerror="this.src='../../dist/img/user4-128x128.jpg'" class="user-image" alt="User Image">
               <span class="hidden-xs"> {{(Auth::user()->username)}}</span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" >
               <!-- User image -->
-              <li class="user-header">
-                <img src="{{asset('/images/'.Auth::user()->image)}}" onerror="this.src='../../dist/img/user4-128x128.jpg'" class="img-circle" alt="User Image">
+              <li class="user-header" style=" background-image: linear-gradient(to right,#FBB3CF,#900C3F);">
+                <img src="{{asset('/images/logo.png')}}" onerror="this.src='../../dist/img/user4-128x128.jpg'" class="img-circle" alt="User Image">
 
                 <p>
                   {{(Auth::user()->username)}}
