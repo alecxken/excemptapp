@@ -18,25 +18,25 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $jobs = Job::all()->count();
-        $jobapp = Jobapp::all()->count();
+        // $jobs = Job::all()->count();
+        // $jobapp = Jobapp::all()->count();
          
-              $post = ApplicantsView::all()->pluck('title');
-              $num = ApplicantsView::all()->pluck('num');
+        //       $post = ApplicantsView::all()->pluck('title');
+        //       $num = ApplicantsView::all()->pluck('num');
 
-               //return $post;
-                $chart = new ApplicantsChart;
-                $chart->labels($post);
-                $chart->dataset('Number of Applicants', 'bar', $num);
+        //        //return $post;
+        //         $chart = new ApplicantsChart;
+        //         $chart->labels($post);
+        //         $chart->dataset('Number of Applicants', 'bar', $num);
 
-                 $sam = new SampleChart;
-                $sam->labels($post);
-                $sam->dataset('My dataset', 'pie', $num);
+        //          $sam = new SampleChart;
+        //         $sam->labels($post);
+        //         $sam->dataset('My dataset', 'pie', $num);
      
                 // $chart = Chart::create('pie', 'highcharts')
 
                 //  
-        return view('data.dashboard',compact('jobs','jobapp','chart','sam'));
+        return view('data.dashboard');
     }
 
     /**

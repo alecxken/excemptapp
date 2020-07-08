@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class KuraOther extends Model
+class CourseChecklist extends Model
 {
     //
 }
