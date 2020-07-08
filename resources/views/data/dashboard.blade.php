@@ -10,7 +10,7 @@
             <span class="info-box-icon bg-aqua"><i class="fa fa-globe"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Jobs</span>
+              <span class="info-box-text">Schools</span>
               <span class="info-box-number">@if(!empty($jobs)) {{$jobs}} @else  0 @endif</span>
             </div>
             <!-- /.info-box-content -->

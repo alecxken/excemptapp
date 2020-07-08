@@ -25,7 +25,7 @@
     <div class="col-md-7">
       <div class="box box-danger">
             <div class="box-header with-border bg-danger disabled">
-                <h6 class="box-title "> School Registration</h6>
+                <h6 class="box-title "> Course Registration</h6>
             </div> 
            <div class="box-body">
           {!! Form::open(['method'=> 'post','url' => 'store-course' ,'files' => true]) !!}
@@ -46,7 +46,7 @@
            </div>          
           </div>
            <div class="box-footer">
-              <button type="submit" class="btn btn-primary ">Submit School</button>
+              <button type="submit" class="btn btn-info ">Submit Course</button>
             </div>
            {!!Form::close()!!}
    </div>
