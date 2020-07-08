@@ -35,7 +35,7 @@
               <option value="">Select School</option>
               @if(!empty($data))
               @foreach($data as $skul)
-                <option>{{$skul->name}}</option>
+                <option value="{{$skul->id}}">{{$skul->name}}</option>
               @endforeach
               @endif
             </select>

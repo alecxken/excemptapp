@@ -30,10 +30,13 @@ class SchoolController extends Controller
 	public function storecos(Request $request)
 	{
 		$token = Token::Unique('courses','course_code',5);
+		$token = Token::Unique('courses','course_code',5);
+                    $t = date("Y-M",strtotime("now"));
+                    $token = strtoupper('KABU-'.$token.'-'.$t); 
 		$data = new Course();
-		$data->school_id = $token;
-		$data->course_code = $request->input('cos_name');
-		$data->course_name = $request->input('skul');
+		$data->school_id = $request->input('skul');
+		$data->course_code = $token;
+		$data->course_name = $request->input('cos_name');
 		$data->save();
 		return back()->with('status','Successfully Registered');
 		return view('school.createskul');
