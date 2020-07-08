@@ -63,7 +63,7 @@
         <!-- /.col -->
       
     </div>
-     <div class="col-md-6" >
+  {{--    <div class="col-md-6" >
       <div class="box box-success">
          <div class="box-header with-border">
           <h3 class="box-title"><b>Applicants Distribution</b>  </h3>
@@ -100,7 +100,7 @@
               {!! $sam->script() !!}
       </div>
         
-    </div>
+    </div> --}}
 </div>
 
 @endsection
