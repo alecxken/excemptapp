@@ -16,14 +16,19 @@ Route::get('/', function () {
     return redirect('home');
 });
 
+
+
+
 Route::get('/create-school','SchoolController@createskul');
 Route::post('/store-school','SchoolController@storeskul');
 
 Route::get('/create-course','SchoolController@createcos');
 Route::post('/store-course','SchoolController@storecos');
 
-Route::get('/create-course-checklist','SchoolController@createchecklist');
-Route::post('/store-course-checklist','SchoolController@storechecklist');
+Route::get('/create-checklist','SchoolController@coursechk');
+Route::post('/store-course-checklist','SchoolController@storecoursechk');
+
+Route::get('/deletechecklist/{id}','SchoolController@deletechecklist');
 
 
 

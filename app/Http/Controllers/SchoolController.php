@@ -10,6 +10,38 @@ use App\User;
 use Token;
 class SchoolController extends Controller
 {
+
+	public function coursechk()
+	{
+		$data = CourseChecklist::all();
+		$data1 = Course::all();
+
+		return view('school.coursechecklist',compact('data','data1'));
+	}
+
+	public function storecoursechk(Request $request)
+	{
+
+		$data = new CourseChecklist();
+		$data->course_code = $request->input('course_code');
+		$data->checklist_name = $request->input('checklist');
+		$data->save();
+
+		return back()->with('status','Successfully ');
+
+		return view('school.coursechecklist',compact('data'));
+	}
+
+	
+	public function deletechecklist($id)
+	{
+		$data = CourseChecklist::findorfail($id);
+		$data->delete();
+		return back()->with('danger','Successfully deleted');
+
+	}
+
+
 	public function createskul()
 	{
 		$data = School::all();
@@ -31,7 +63,7 @@ class SchoolController extends Controller
 	{
 		$token = Token::Unique('courses','course_code',5);
 		$token = Token::Unique('courses','course_code',5);
-                    $t = date("Y-M",strtotime("now"));
+                    $t = date("Y",strtotime("now"));
                     $token = strtoupper('KABU-'.$token.'-'.$t); 
 		$data = new Course();
 		$data->school_id = $request->input('skul');

@@ -46,6 +46,7 @@
             </a>
             <ul class="treeview-menu">
             <li><a href="{{url('create-school')}}"><i class="fa fa-link"></i> <span>Course/School</span></a></li>
+             <li><a href="{{url('create-checklist')}}"><i class="fa fa-link"></i> <span>Checklist Creation</span></a></li>
             <li><a href="{{url('admin')}}"><i class="fa fa-link"></i> <span>User Management</span></a></li>
              {{-- //<li><a href="{{url('delete-alls/')}}"><i class="fa fa-link"></i> <span>Delete Applicants</span></a></li> --}}
            
