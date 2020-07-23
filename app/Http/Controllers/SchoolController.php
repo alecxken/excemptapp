@@ -11,6 +11,15 @@ use Token;
 class SchoolController extends Controller
 {
 
+
+	public function applynow()
+	{
+		$data = CourseChecklist::all();
+		$data1 = Course::all();
+
+		return view('school.newapplicant',compact('data','data1'));
+	}
+
 	public function coursechk()
 	{
 		$data = CourseChecklist::all();

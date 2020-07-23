@@ -15,7 +15,7 @@
 Route::get('/', function () {
     return redirect('home');
 });
-
+Route::get('/jobs-apps','SchoolController@applynow');
 
 
 
