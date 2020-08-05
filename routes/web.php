@@ -17,6 +17,14 @@ Route::get('/', function () {
 });
 Route::get('/jobs-apps','SchoolController@applynow');
 
+Route::get('/view-apps','SchoolController@applicants');
+
+Route::get('/view-adminapps','SchoolController@myapplicants');
+
+Route::post('/proceed-job','SchoolController@continue');
+
+Route::post('/save-final','SchoolController@savefinal');
+
 
 
 Route::get('/create-school','SchoolController@createskul');

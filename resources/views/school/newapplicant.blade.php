@@ -11,21 +11,21 @@
                 <h6 class="box-title "> Excemption Application</h6>
             </div> 
            <div class="box-body">
-          {!! Form::open(['method'=> 'post','url' => '' ,'files' => true]) !!}
-
+          {!! Form::open(['method'=> 'post','url' => 'proceed-job' ,'files' => true]) !!}
+          <input type="hidden" name="token" value="{{$token}}">
               <div class="form-group col-md-4">
             {!! Form::label('C_Name', 'Name Of Applicant', ['class' => 'col-form-label '])!!}
-            {!!Form::text('app_name',Auth::user()->name,['class' => 'form-control','readonly' ])!!}
+            {!!Form::text('applicant',Auth::user()->name,['class' => 'form-control','readonly' ])!!}
            </div>    
 
             <div class="form-group col-md-4">
             {!! Form::label('C_Name', 'CERT/DIPLOMA done', ['class' => 'col-form-label '])!!}
-            {!!Form::text('checklist',Null,['class' => 'form-control' ])!!}
+            {!!Form::text('course_done',Null,['class' => 'form-control' ])!!}
            </div> 
 
             <div class="form-group col-md-4">
             {!! Form::label('C_Name', 'Institution', ['class' => 'col-form-label '])!!}
-            {!!Form::text('checklist',Null,['class' => 'form-control' ])!!}
+            {!!Form::text('institution',Null,['class' => 'form-control' ])!!}
            </div>  
 
            <div class="form-group col-md-12 ">

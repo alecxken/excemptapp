@@ -33,9 +33,11 @@
           <!-- Optionally, you can add icons to the links -->
           <li  class="{{ (request()->is('dashboard')) ? 'active' : '' }}"><a href="{{url('dashboard')}}"><i class="fa fa-link"></i> <span>Dashboard</span></a></li>
           
-           <li><a href="{{url('jobs-apps')}}"><i class="fa fa-link"></i> <span>New Applicant</span></a></li>
+           <li><a href="{{url('jobs-apps')}}"><i class="fa fa-link"></i> <span>New Application</span></a></li>
+           <li><a href="{{url('view-apps')}}"><i class="fa fa-link"></i> <span>My Application</span></a></li>
            @role('Reports')
            <li  class="{{ (request()->is('my-apps1')) ? 'active' : '' }}"><a href="{{url('my-apps1')}}"><i class="fa fa-link text-green"></i> <span>Job Applicants List</span></a></li>
+
            @endrole
       
           <li class="treeview {{ (request()->is('job')) ? 'active' : '' }} ">
@@ -45,6 +47,7 @@
                 </span>
             </a>
             <ul class="treeview-menu">
+<li><a href="{{url('view-adminapps')}}"><i class="fa fa-link"></i> <span>View Applications</span></a></li>
             <li><a href="{{url('create-school')}}"><i class="fa fa-link"></i> <span>Course/School</span></a></li>
              <li><a href="{{url('create-checklist')}}"><i class="fa fa-link"></i> <span>Checklist Creation</span></a></li>
             <li><a href="{{url('admin')}}"><i class="fa fa-link"></i> <span>User Management</span></a></li>
