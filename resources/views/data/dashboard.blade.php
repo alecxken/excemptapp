@@ -1,7 +1,12 @@
 @extends('layouts.template')
 
 @section('content')
-
+@php
+$school = \App\School::all()->count();
+$jobapp = \App\Appdata::all()->count();
+$pend = \App\Appdata::all()->where('status','pending')->count();
+$comp = \App\Appdata::all()->where('status','Complete')->count();
+@endphp
 <div class="content">
 	 <div class="row justify-content-center" >
         
@@ -11,7 +16,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Schools</span>
-              <span class="info-box-number">@if(!empty($jobs)) {{$jobs}} @else  0 @endif</span>
+              <span class="info-box-number">@if(!empty($school)) {{$school}} @else  0 @endif</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -41,7 +46,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text">Completed </span>
-              <span class="info-box-number"></span>
+              <span class="info-box-number">@if(!empty($jobapp)) {{$jobapp}} @else 0 @endif</span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -54,7 +59,7 @@
 
             <div class="info-box-content">
               <span class="info-box-text"> Pending </span>
-              <span class="info-box-number"></span>
+              <span class="info-box-number">@if(!empty($pend)) {{$pend}} @else 0 @endif</span>
             </div>
             <!-- /.info-box-content -->
           </div>
